@@ -3,15 +3,25 @@ SITENAME = 'MyRunBlog'
 SITEURL = 'https://run200k.github.io/theBlog'
 
 # Paths
-PATH = 'content'
-PAGE_PATHS = ['pages']
 ARTICLE_PATHS = ['posts']
+PAGE_PATHS = ['pages']
+PATH = 'content'
+PLUGIN_PATHS = ['pelican-plugins']
+
 
 TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = 'en'
 
-THEME = '/home/julian/Documents/pelicanthemes/pelican-themes/monospace'
+# Themes Plugins Extensions
+THEME = 'pelican-themes/monospace'
+
+PLUGINS = [
+    #'liquid_tags.youtube',
+    'series',
+    'tag_cloud'
+]
+
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
